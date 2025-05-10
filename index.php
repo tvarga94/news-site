@@ -18,6 +18,7 @@ $articles = $stmt->fetchAll();
                 <?= date('Y-m-d H:i', strtotime($article['created_at'])) ?>
             </h6>
             <p class="card-text mt-2"><?= nl2br(htmlspecialchars($article['intro'])) ?></p>
+            <a href="view.php?id=<?= $article['id'] ?>" class="btn btn-primary">Read more</a>
         </div>
     </div>
 <?php endforeach; ?>
